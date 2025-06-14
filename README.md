@@ -32,9 +32,5 @@ An end-to-end online food delivery platform built with **Java, JDBC, Servlets, J
 4. **Order Tracking**: Real-time tracking of the order from preparation to delivery.
 5. **Admin/Restaurant Panel**: Manage menu, track orders, and update statuses.
 
-## 📸 Screenshots
 
-> _Include relevant UI screenshots here if available._
-
-## 📁 Project Structure
 
