@@ -1,0 +1,1370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+     z-index: 1500;
+}
+.body .profile-logo {
+    position: sticky;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+}
+/* header cart icon styles */
+.header .Cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 30px;
+    transition: color 0.3s ease-in-out;
+}
+.header .Cart-icon:hover {
+    color: #ff6f61;
+}
+.Cart-icon h1 {
+    font-size: 24px;
+}
+
+ .Cart-count {
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+    right: 160px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Space between logo and navigation */
+    margin-left: 190px;
+}
+header .logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 150px; /* Space between logo and title */
+    margin-left: 160px;
+    margin-top: 15px;
+    
+}
+header .logo h1 {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 5px 5px 10px rgba(234, 231, 231, 0.5);
+    font-size: 50px;
+}
+
+.shadow-image {
+   filter:drop-shadow(5px 5px 2px #040404);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 150px;
+}
+
+/* General styles for search input and button */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out, padding 0.4s ease-in-out;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input.open {
+    width: 250px;
+    /* Adjust as needed */
+    padding: 10px;
+}
+
+.search-button {
+    background-color: #ff5722;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.search-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+}
+
+
+nav {
+    background: whitesmoke;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav li a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #ff5722;
+}
+
+.nav-icon {
+    font-size: 20px;
+    color: #ff5722;
+}
+
+.nav-icon:hover {
+    color: #ff5722;
+}
+
+.cta-button, .btn {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 10px 0 rgba(27, 27, 27, 0.37);
+}
+
+.cta-button:hover, 
+.btn:hover {
+    background-color: #686564;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-top: 25px;
+    font-weight: 700;
+    color: #282c34;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card .info {
+    padding: 15px;
+    padding-bottom: 40px; /* Ensure space for the button */
+}
+
+.resturant-Name {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.price i {
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.product-card .price {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #ff5722;
+}
+
+.veg {
+    position: absolute;
+    top: 210px;
+    right: 10px;
+    background: #22ff6c;
+    color: #0f0f0f;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.non-veg {
+    position: absolute;
+    top: 210px;
+    right: 10px;
+    background: #ff2222;
+    color: #fefdfd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* More content */
+.more-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensure 4 items per row */
+    gap: 20px;
+    margin-top: 50px;
+}
+.cart-button {
+    position: relative;
+    padding: 10px;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #ff5722;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.cart-button:hover {
+    background-color: #ff5722;
+}
+
+.cart-button:active {
+    transform: scale(0.95); /* Shrink effect on click */
+}
+
+/* Shopping cart icon */
+.cart-button .fa-cart-shopping {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -10%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    transition: transform 2s ease-in-out;
+}
+
+/* Box icon */
+.cart-button .fa-box {
+    position: absolute;
+    z-index: 3;
+    top: -20%;
+    left: 52%;
+    font-size: 1.2em;
+    color: burlywood;
+    transform: translate(-50%, -50%);
+    transition: top 2s ease-in-out;
+}
+
+/* Text spans */
+.cart-button span {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    font-size: 1.3em;
+    color: #fdf8f8;
+    transform: translate(-50%, -50%);
+}
+
+.cart-button span.add-to-cart {
+    opacity: 1;
+}
+
+.cart-button span.added {
+    opacity: 0;
+}
+
+/* When the button is clicked */
+.cart-button.clicked {
+    animation: bgChange 2s ease-in-out forwards;
+}
+
+.cart-button.clicked .fa-cart-shopping {
+    animation: truck 2s ease-in-out forwards;
+}
+
+.cart-button.clicked .fa-box {
+    animation: box 2s ease-in-out forwards;
+}
+
+.cart-button.clicked span.add-to-cart {
+    animation: txt1 2s ease-in-out forwards;
+}
+
+.cart-button.clicked span.added {
+    animation: txt2 2s ease-in-out forwards;
+}
+
+/* Animations for the shopping cart and box */
+@keyframes truck {
+    0% { left: -10%; }
+    40%, 55% { left: 50%; }
+    100% { left: 110%; }
+}
+
+@keyframes box {
+    0%, 40% { top: -20%; left: -5%; }
+    55% { top: 37%; left: 52%; }
+    100% { top: 37%; left: 110%; }
+}
+
+/* Text opacity animations */
+@keyframes txt1 {
+    0% { opacity: 1; }
+    20%, 100% { opacity: 0; }
+}
+
+@keyframes txt2 {
+    0%, 80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Background color animation */
+@keyframes bgChange {
+    0% {
+        background-color: #1ba916; /* Original color */
+    }
+    50% {
+        background-color: #1ba916cb; /* Change color during animation */
+    }
+    100% {
+        background-color: #1ba916cb; /* Revert to original color */
+    }
+}
+
+
+/* Flexbox styling for the cart content */
+/* Cart pop-up content */
+.cart-content {
+    display: flex;
+    justify-content: flex-start; /* Align both elements to the left */
+    align-items: center;
+    gap: 70%; /* Reduced space between cart count and view cart link */
+}
+
+/* Cart pop-up */
+.cart-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #469421;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Close button for the cart pop-up */
+.cart-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* View Cart as a link */
+.view-cart-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.view-cart-link:hover {
+    color: #ffd4b3;
+}
+
+/* Cart icon and count */
+#cartCount {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Optional styling for cart icon */
+.cart-icon {
+    margin-right: 1px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+footer {
+    background-color: #282c34;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-link-section {
+    max-width: 200px;
+}
+
+.footer-link-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.footer-link-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-link-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link-section ul li a:hover {
+    color: #ff5722;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff5722;
+}
+footer a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/*  sliding Animation */
+.slider-container {
+    position: relative;
+    width: 100%; /* Full width of the webpage */
+    height: 400px; /* Fixed height for the slider */
+    overflow: hidden; /* Hide overflow to only show one slide at a time */
+    box-shadow: 0 5px 10px 0 rgba(27, 27, 27, 0.38);
+    margin: 0 auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth scroll animation */
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: 100%; /* Full width for the slider */
+    transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+}
+
+.slider-item {
+    min-width: 100%; /* Each item takes up the full width of the webpage */
+    height: 400px; /* Fixed height for each slider item */
+}
+
+.slider-item img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: 100%; /* Image takes up the full height of its container */
+    object-fit: cover; /* Ensure the image covers the entire slider item without distortion */
+}
+
+.slider-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prev, .next {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.contact-section {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #282c34;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-section button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #e64a19;
+}
+/* Marquee animation (sliding animation )*/
+  /* Carousel Wrapper Styles */
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin-right: 2px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 90%;
+    border-radius: 10px;
+    filter:drop-shadow(5px 5px 2px #040404);
+}
+
+.text-overlay {
+    margin-top: 8px;
+    font-size: 16px;
+    margin-bottom: -10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Filters */
+/* Filter container */
+/* Filter container */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 1px;
+    margin-bottom: -10px;
+}
+
+/* Individual filter section */
+.filter-section {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 2px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* For close icon positioning */
+}
+
+/* Selected filter styles */
+.filter-section.selected {
+    background-color:  #9f9c9c;
+    color: white;
+}
+
+/* Close icon for selected filters */
+.filter-section .close-filter {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.filter-section.selected .close-filter {
+    display: block; /* Show close icon when selected */
+}
+
+/* Label for filter options */
+.filter-label {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* Contents inside each filter option */
+.contents {
+    display: flex;
+    align-items: center;
+}
+
+/* Filter item text */
+.filter-item {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Modify hover effects */
+.filter-section:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+    color: #fff;
+}
+
+/* For selected filter items, override hover */
+.filter-section.selected:hover {
+    background-color: #9f9c9c;
+    color: #fff;
+}
+
+
+
+/* about styles */
+
+.about-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-top: 5px solid #ff5722;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    color: #ff5722;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-section strong {
+    color: #ff5722;
+}
+
+/* profile logo */
+/* Profile logo styling */
+.profile-logo {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure the profile logo is on top */
+}
+
+.profile-logo img {
+    width: 100%;
+    height: 130%;
+    border: 1px solid black;
+    border-radius: 50%; /* Makes the image circular */
+    filter: drop-shadow(2px 2px 5px #090909);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100px; /* Position the dropdown above the logo */
+    right: 0; /* Aligns the dropdown with the right side of the profile logo */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1002; /* Ensure the dropdown menu is above the nav bar */
+    animation: slideUp 0.3s ease-in-out; /* Changed animation to slide up */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Popup CSS */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1300;
+    left: 2%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.popup .close-btn {
+    color: #aaa;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup .close-btn:hover,
+.popup .close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.profile-photo-section {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#editProfileForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#editProfileForm label {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#editProfileForm input,
+#editProfileForm textarea,
+#editProfileForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#editProfileForm button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#editProfileForm button:hover {
+    background-color: #555;
+}
+
+/* pop-up for check password */
+/* Popup Styles for change password */
+.pop1 {
+    display: none;
+    position: fixed;
+    z-index: 1300;
+    left: 30%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup1-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.close-popup1 {
+    color: #aaa;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-popup1:hover,
+.close-popup1:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#changePasswordForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.security-section,
+.password-section {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#changePasswordForm label {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#changePasswordForm input,
+#changePasswordForm textarea,
+#changePasswordForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#changePasswordForm button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#changePasswordForm button:hover {
+    background-color: #555;
+}
+/* check orders styles */
+/* General container for orders */
+.order-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    padding: 20px;
+    z-index: 1300; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide the scrollbar */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 3% auto; /* Reduced margin to increase visible height */
+    padding: 30px; /* Increased padding for more content spacing */
+    border: 1px solid #888;
+    width: 90%; /* Adjusted to make the form fit within the popup window */
+    max-width: 1000px; /* Increased max-width for larger screens */
+    max-height: 80%; /* Increased max-height relative to viewport height */
+    overflow-y: scroll; /* Add scroll if content overflows */
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    z-index: 1350;
+   margin-top: 7%;
+} 
+
+.modal-content::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+/* Styling for each order */
+.order-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    z-index: 1350;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for the image */
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Styling for the item details */
+.item-details {
+    flex: 1;
+    cursor: pointer;
+}
+
+.item-details h2 {
+    margin: 0;
+    color: #d34410;
+    cursor: pointer;
+}
+
+.item-description {
+    color: #555;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.item-details p {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.item-details strong {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Styling for the link */
+.item-details a {
+    text-decoration: none;
+    color: #d64211;
+    font-size: 18px;
+}
+
+.item-details a:hover {
+    text-decoration: underline;
+}
+
+.item-details .nav-icon {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+
+/* feedback option */
+/* General Modal Styles */
+.modal1 {  
+    display: none;  
+    position: fixed;  
+    z-index: 1300;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+    overflow: auto;  
+    background-color: rgba(0, 0, 0, 0.4);  
+  }  
+    
+  .modal-content1 {  
+    background-color: #fefefe;  
+    margin: 15% auto;  
+    padding: 20px;  
+    border: 1px solid #888;  
+    width: 50%;  
+    max-width: 600px;  
+    z-index: 1450;  
+    border-radius: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+  }  
+    
+  .close {  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
+  }  
+    
+  .close:hover, .close:focus {  
+    color: black;  
+    text-decoration: none;  
+    cursor: pointer;  
+  }  
+    
+  /* Feedback Button */  
+  .feedback-btn {  
+    float: right;  
+    background-color: #007bff;  
+    color: white;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+  }  
+    
+  .feedback-btn:hover {  
+    background-color: #0056b3;  
+  }  
+    
+  /* Star Rating */  
+  .star-rating {  
+    font-size: 30px;  
+    color: lightgray;  
+    margin-bottom: 20px;  
+  }  
+    
+  .star-rating .fa {  
+    cursor: pointer;  
+  }  
+    
+  .star-rating .fa:hover,  
+  .star-rating .fa.selected {  
+    color: gold;  
+  }  
+    
+  /* Feedback Text Area */  
+  .feedback-text {  
+    width: 100%;  
+    padding: 10px;  
+    margin-bottom: 20px;  
+    font-size: 16px;  
+    border-radius: 5px;  
+    border: 1px solid #ccc;  
+  }  
+    
+  /* Send Feedback Button */  
+  .send-feedback-btn {  
+    background-color: #f45820;  
+    color: white;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    display: block;  
+    margin: 0 auto;  
+  }  
+    
+  .send-feedback-btn:hover {  
+    background-color: #218838;  
+  }
+  .star-rating {
+    display: inline-block;
+}
+
+
+.fa-star {
+    color: #ccc; /* Default empty star color (grey or light) */
+    font-size: 20px;
+}
+
+.star-colored {
+    color: #f4c542; /* Yellow color for filled stars */
+}
+  

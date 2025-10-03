@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-Sphere</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="icon" href="https://icon-library.com/images/library-icon-png/library-icon-png-28.jpg" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+                <img src="https://github.com/obito1947/Food-delivery-/blob/main/WhatsApp_Image_2024-08-16_at_00.11.14_9ae1571f-removebg-preview.png?raw=true" alt="Food-Sphere Logo" class="shadow-image">
+                <center><h1>Food- Sphere</h1></center>
+        </div>
+
+        <div class="header-content">
+            <div class="search-container">
+                <input type="text" id="searchInput" name="query" class="search-input" placeholder="Search..." />
+                <button id="searchButton" class="search-button" action="/search" method="GET" target="_blank">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+            <button class="cta-button" id="loginBtn">Log In</button>
+    <div class="dropdown-content-1" id="loginDropdown">
+        <a href="UserLogin.jsp">User Login</a>
+        <a href="ResLogin.jsp">Restaurant Login</a>
+    </div>
+
+    <button class="cta-button" id="registerBtn">Register</button>
+    <div class="dropdown-content-2" id="registerDropdown">
+        <a href="UserRegistration.jsp">User Registration</a>
+        <a href="RestaurantRegistration.jsp">Restaurant Registration</a>
+    </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-home nav-icon"></i> Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-shop nav-icon"></i> Shop</a></li>
+            <li><a href="#"><i class="fa-solid fa-concierge-bell nav-icon"></i> Services</a></li>
+            <li><a href="#" id="AboutUsBtn"><i class="fa-solid fa-info-circle nav-icon"></i> About</a></li>
+            <li><a href="#" id="contactUsBtn" ><i class="fa-solid fa-envelope nav-icon"></i> Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slider-item" >  <img src="https://res.cloudinary.com/dafkqy8pe/image/upload/v1726576552/DALL_E_2024-09-17_18.02.17_-_A_futuristic_delivery_scene_showing_a_young_man_with_spiky_h_imy9do.webp" alt="Image 1" /></div>
+              
+                  <div class="slider-item" > <img src="https://th.bing.com/th/id/OIG4.qY2fvnFEvVM0aIPTxf0L?w=1024&h=1024&rs=1&pid=ImgDetMain"alt="Image 2"/></div>
+
+                    <div class="slider-item" > <img src="https://th.bing.com/th/id/OIG4.FU9XiW3eISzp00TbtyCi?w=1024&h=1024&rs=1&pid=ImgDetMain"alt="Image 3"/></div>
+
+                      <div class="slider-item" > <img src="https://th.bing.com/th/id/OIG4.J.9jF.0SnSrfJsUL3v3l?pid=ImgGn" alt="Image 4" /></div>
+
+                        <div class="slider-item" > <img src="https://th.bing.com/th/id/OIG2.FwARIIEYbX68Re627Qyf?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Image 5" /></div>
+                          <!-- Add more images as needed -->
+            </div>
+        </div>
+        <button class="prev1" onclick="previousSlideItem()">❮</button>
+        <button class="next1" onclick="nextSlideItem()">❯</button>
+    </div><br>
+
+    <div class="main-content">
+        <div class="carousel-container">
+            <button class="arrow left-arrow">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <a href="link-to-biriyani">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Biriyani-removebg-preview.webp" alt="Biriyani">
+                    </a>
+                    <div class="text-overlay" >
+                        <p>Biriyani</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-pizza">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/pizza-removebg-preview%20(2).webp" alt="Pizza" style="width: 100%;">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Pizza</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-burger">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Burger-removebg-preview.webp" alt="Burger" style="width: 100%;">
+                    </a>
+                    <div class="text-overlay">
+                        <p><br>Burger</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-rolls">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Rolls-removebg-preview.webp" alt="Rolls">
+                    </a>
+                    <div class="text-overlay">
+                        <p><br>Rolls</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-shakes">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Shakes-removebg-preview.webp" alt="Shakes">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Shakes</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-cakes">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Cakes-removebg-preview%20(1).webp" alt="Cakes">
+                    </a>
+                    <div class="text-overlay">
+                        <p><br>Cakes/Desserts</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-shawarma">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Naan_s-removebg-preview.webp" alt="Naan's">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Naan's</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-noodles">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Noodles-removebg-preview.webp" alt="Noodles" style="height: 50%;">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Noodles</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-Fried-rice">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Friedrice-removebg-preview.webp" alt="Fried-Rice" style="width: 100%; height: 1205;" >
+                    </a>
+                    <div class="text-overlay">
+                        <p>Fried-Rice</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-juices">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Staters-removebg-preview.webp" alt="Staters">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Staters</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-icecreams">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Icecream-removebg-preview.webp" alt="Ice Creams">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Ice Creams</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="link-to-curries">
+                        <img src="https://raw.githubusercontent.com/obito1947/Food-delivery-/main/images/Curries-removebg-preview.webp" alt="Curries" style="height: 50%;">
+                    </a>
+                    <div class="text-overlay">
+                        <p>Curries</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow">&#10095;</button>
+        </div>
+        <div class="container2">
+            <div class="Resturant-container">
+                <h1>Top-Resturants</h1>
+                <div class="slider1-wrapper">
+                    <div class="slider1">
+                      <div class="slider1-item" >  
+                        <img src="https://th.bing.com/th/id/OIP.cznetagj_PSJwiIBRyaG-wHaHa?rs=1&pid=ImgDetMain"
+                                   alt="Collection 1">
+                                <div class="info">
+                                    <h3>Leo Cafe & Restaurant</h3>
+                                     <p>Every Bite, a Roaring Delight.</p>
+                                </div>
+                        </div>
+                      
+                          <div class="slider1-item" > 
+                            <img src="https://th.bing.com/th/id/OIP.EjCX_iNDyP627vRlylCdsAHaHa?rs=1&pid=ImgDetMain"
+                               alt="Collection 2">
+                            <div class="info">
+                                 <h3>Pizza Hut</h3>
+                                 <p>The Pizza You Love, Fresh and Hot!.</p>
+                            </div>
+                        </div>
+                            <div class="slider1-item" > 
+                                <img src="https://th.bing.com/th/id/OIP.VkAW143UfyJY0QwzAgF0uQHaHa?rs=1&pid=ImgDetMain"
+                                alt="Collection 3">
+                               <div class="info">
+                                 <h3>Five Star Chicken</h3>
+                                 <p>Savor the Taste of Perfection!.</p>
+                                </div>
+                            </div>
+                            <div class="slider1-item" >  
+                                <img src="https://play-lh.googleusercontent.com/2cZbyof4TCkhibr1abksSMM_dYpGJb7rJA88zDZVtLzSrv0diAY8GXH4diC7sw-Xt60"
+                                           alt="Collection 4">
+                                        <div class="info">
+                                            <h3>Kateeza Mandi Restaurant</h3>
+                                             <p>Experience the Rich Flavors of the Middle East!</p>
+                                        </div>
+                                </div>
+                              
+                                  <div class="slider1-item" > 
+                                    <img src=https://vectorseek.com/wp-content/uploads/2023/09/cakeland-Logo-Vector.svg-.png"
+                                       alt="Collection 5">
+                                    <div class="info">
+                                         <h3>Cake Land</h3>
+                                         <p>Your Destination for Sweet Temptations!</p>
+                                    </div>
+                                </div>
+                                    <div class="slider1-item" > 
+                                        <img src="https://th.bing.com/th/id/OIP.YoDhxdijmaXlazbo6t4EGgHaHa?rs=1&pid=ImgDetMain"
+                                        alt="Collection 6">
+                                       <div class="info">
+                                         <h3>Mr.Pizza</h3>
+                                         <p>Where Every Slice is a Masterpiece!</p>
+                                        </div>
+                                    </div>
+                                    <div class="slider1-item" > 
+                                        <img src="https://th.bing.com/th/id/OIP.a2IcWNU3b5i-6AR3MJj80wHaHa?w=1380&h=1380&rs=1&pid=ImgDetMain"
+                                        alt="Collection 7">
+                                       <div class="info">
+                                         <h3>Cakes Dot Com</h3>
+                                         <p>Baking Sweet Memories,Where Every Slice Tells a Story!</p>
+                                        </div>
+                                    </div>
+                                    <div class="slider1-item" >  
+                                        <img src="https://r2.erweima.ai/imgcompressed/compressed_eff48b2fb25e1d7c9f8ce8cce1b02e1a.webp"
+                                                   alt="Collection 8">
+                                                <div class="info">
+                                                    <h3>Ramzan Restaurant</h3>
+                                                     <p>Where Every Meal is a Celebration!</p>
+                                                </div>
+                                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="prevRestaurantSlide()">❮</button>
+                <button class="next" onclick="nextRestaurantSlide()">❯</button>
+            </div>
+            </div>
+            <p></p><br><br><br>
+
+        <div class="section">
+            <p></p><br>
+            <h2>New Items</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="item 1">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 1</h3>
+                        <p>Description of item 1.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="veg">Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="item 2">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 2</h3>
+                        <p>Description of item 2.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="non-veg">Non-Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/3020129/pexels-photo-3020129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="item 3">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 3</h3>
+                        <p>Description of item 3.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="veg">Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/4110337/pexels-photo-4110337.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                        alt="item 4">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 4</h3>
+                        <p>Description of item 4.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="non-veg">Non-Veg</div>
+                </div>
+            <span class="more-content">
+                <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="item 5">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 5</h3>
+                        <p>Description of item 5.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="veg">Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="item 6">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 6</h3>
+                        <p>Description of item 6.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="non-veg">Non-Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/3020129/pexels-photo-3020129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="item 7">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 7</h3>
+                        <p>Description of item 7.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="veg">Veg</div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/4110337/pexels-photo-4110337.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                        alt="item 8">
+                    <div class="info">
+                        <p class="resturant-Name">Restaurant Name </p>
+                        <h3>item 8</h3>
+                        <p>Description of item 8.</p>
+                        <div class="price">₹69.99 <i>₹79.99</i></div>
+                    </div>
+                    <div class="non-veg">Non-Veg</div>
+                </div>
+            </div>
+            </span>
+            </div><p></p><br>
+            <center><span class="button" onclick="toggleContent()">View More </span> </center>
+        </div>
+        <p></p><br>
+        <section class="about-section" id="about-section">
+            <div class="container">
+                <h1>About Food Sphere</h1>
+                <p>Welcome to <strong>Food Sphere</strong>, your ultimate online food delivery platform designed to bring
+                     the best dining experiences right to your doorstep. Whether you're craving a gourmet meal from your 
+                     favorite restaurant, a quick snack, or something healthy, Food Sphere has got you covered.</p>
+                <p>Our mission is to connect food lovers with a wide array of culinary delights from local eateries, 
+                    popular chains, and unique hidden gems. We pride ourselves on offering a seamless, user-friendly 
+                    platform where you can explore diverse menus, customize your orders, and enjoy fast, reliable 
+                    delivery—all with just a few clicks.</p>
+                <p>At Food Sphere, we believe that great food should be accessible to everyone, anytime, anywhere. We re 
+                    dedicated to providing top-notch customer service, ensuring that your meals are prepared fresh, delivered
+                     promptly, and meet your expectations every time.</p>
+            </div>
+        </section>
+        <p></p><br><br>
+        <div id="contact-section" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+       <footer>
+        <div class="footer-content">
+                    <div class="footer-link-section">
+                        <ul>
+                            <li><a href="mailto:support@muhilanstore.com">support@muhilanstore.com</a></li>
+                            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                            <li><a href="#">1234 Market St, San Francisco, CA</a></li>
+                        </ul>
+                     </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p>&copy; 2024 Muhilan Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="Home.js"></script>
+</body>
+
+</html>
